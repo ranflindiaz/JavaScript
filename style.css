@@ -1,0 +1,42 @@
+body {
+    background-color: #cFcAcF;
+}
+
+.wrap {
+    max-width: 500px;
+    margin: 100px auto;
+}
+
+.formulario {
+    font-size: 2em;
+}
+
+.nombre,
+.apellido,
+.ced_o_pas,
+.direccion,
+.telefono {
+    display: flex;
+    margin: 0 70px 0 0;
+}
+
+input[type="text"] {
+    border-radius: 4px;
+}
+
+.redBorder {
+    border-color: red;
+}
+
+
+/*Si el valor que el usuario escribe es valido, obtendra un color verde*/
+form input[type="text"]:valid {
+    border: 2px solid green;
+    /* otras propiedades */
+}
+
+/*caso contrario, el color sera rojo*/
+form input:focus:invalid {
+    border: 2px solid red;
+    /* otras propiedades */
+}
