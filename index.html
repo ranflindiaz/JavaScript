@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario en PHP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!--    <script>
+        $(document).ready(function() {
+            $('#submitBtn').on('click', function(e) {
+                debugger;
+                e.preventDefault();
+                var fields = document.getElementsByTagName('input');
+                for (var i = 0; i < fields.length; i++) {
+                    if (fields[i].hasAttribute('required')) {
+                        if (fields[i].value === "") {
+                            fields[i].classList.add('redBorder');
+                            $(fields[i]).after("<span id='spn'>*</span>");
+                        } else {
+                            fields[i].classList.remove('redBorder');
+                        }
+                    }
+                }
+            });
+        });
+
+    </script>-->
+
+</head>
+
+<body>
+    <main>
+        <form novalidate action="form.php" method="post" onsubmit="return validar();">
+            <fieldset class="wrap">
+                <legend class="formulario">Formulario</legend>
+
+                <label class="nombre" for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label class="apellido" for="apellido">Apellido:</label>
+                <input type="text" name="apellido" id="apellido" required><br><br>
+
+                <label class="ced_o_pas" for="cedula">Cedula o Passaporte:</label>
+                <input type="text" name="cedula" id="cedula" required><br><br>
+
+                <label class="direccion" for="direccion">Direccion:</label>
+                <input type="text" name="direccion" id="direccion" required><br><br>
+
+                <label class="telefono" for="telefono">Telefono:</label>
+                <input type="text" name="telefono" id="telefono" required><br><br>
+
+                <label class="sexo" for="sexo">Sexo:</label>
+                <input id="sexo" type="radio" value="hombre" name="sexo">Hombre
+                <input id="sexo" type="radio" value="mujer" name="sexo">Mujer<br><br>
+
+                <label class="edad" for="edad">Edad:</label>
+                <select name="edad" id="edad">
+                    <option value="">Seleccione</option>
+                    <option value="1">18</option>
+                    <option value="2">21</option>
+                </select><br><br>
+
+                <input type="submit" value="Enviar" id="submitBtn">
+                <input type="reset" value="Limpiar">
+
+            </fieldset>
+        </form>
+
+    </main>
+
+</body>
+
+</html>
